@@ -37,10 +37,6 @@ int mkdirs(const char * path, const mode_t mode, const int fail_on_exist)
         {
             if ((result = mkdir(path, mode)))
             {
-                char s[PATH_MAX];
-                sprintf(s, "mkdir() failed for '%s'", path);
-                perror(s);
-
                 if ((EEXIST == result) && (0 == fail_on_exist))
                     result = 0;
                 else
