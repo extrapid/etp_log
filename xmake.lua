@@ -3,5 +3,5 @@ set_optimize("fastest")
 
 target("etp_log")
     set_kind("shared")
-    add_files("log.c")
+    add_files("log.cpp")
 
